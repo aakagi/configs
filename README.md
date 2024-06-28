@@ -14,6 +14,11 @@ Accessibility
     Trackpad Options...
       Use trackpad for dragging: On
       Dragging style: Three Finger Drag
+  Audio
+    Spatial audio follows head movements: Off
+    Sound settings (at bottom)
+      Play sound on startup: Off
+      Play user interface sound effects: Off
 
 General
   Sharing
