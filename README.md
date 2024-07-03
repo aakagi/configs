@@ -38,6 +38,9 @@ Desktop & Dock
 Keyboard
   Keyboard shortcuts
     Screenshots: Swap save / copy commands for *3 and *4
+    Services
+      Searching
+        "Search with Google": Off
   Text Replacements
     Remove "omw"
   Text Input, Input Sources: Edit
