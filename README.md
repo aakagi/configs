@@ -35,6 +35,9 @@ Desktop & Dock
   # Prevents behavior where switching between workspaces causes nothing to be in focus.
   Mission Control, Displays have separate Spaces: Off
 
+Displays
+  Automatically adjust brightness: Off
+
 Keyboard
   Keyboard shortcuts
     Screenshots: Swap save / copy commands for *3 and *4
