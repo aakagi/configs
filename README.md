@@ -54,16 +54,15 @@ Keyboard
 
 ### ZDOTDIR
 
-Use this folder for zsh:
-
-```
+```zsh
+# Execute this script to link to this repo's zdotdir
 ./zdotdir/link.sh
 ```
 
 #### Load order
 
 ```
-# zsh -l
+# > zsh -l
 .zshenv → .zprofile → .zshrc → .zlogin → .zlogout
 
 → ~/.zshenv
