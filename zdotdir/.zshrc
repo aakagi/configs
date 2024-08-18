@@ -12,6 +12,9 @@
 
 export CONFIGS=$(realpath "$ZDOTDIR/..")
 
+# Makes it easy to "cd" into the dir just by typing `$configs`.
+export configs=$CONFIGS
+
 alias configs="code $CONFIGS"
 
 ##############################
