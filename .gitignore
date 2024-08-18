@@ -1,1 +1,5 @@
-highbeam/
+# zsh
+zdotdir/highbeam
+.zsh_sessions
+.zcompdump*
+.zsh_history

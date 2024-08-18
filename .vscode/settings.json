@@ -5,5 +5,17 @@
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "files.exclude": {
+    "**/.zsh_sessions": true,
+    "**/.zcompdump*": true,
+    "**/.zsh_history": true,
+    // ... defaults
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
   }
 }
