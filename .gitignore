@@ -6,3 +6,6 @@ zdotdir/highbeam
 
 # Temporarily using `plugins` to store local configs, which doesn't seem like something I should commit.
 plugins
+
+# Mac
+.DS_Store
