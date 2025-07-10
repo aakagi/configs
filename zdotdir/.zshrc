@@ -7,17 +7,6 @@
 ###################################################################################################
 
 ##############################
-# -- configs (this repo) --
-##############################
-
-export CONFIGS=$(realpath "$ZDOTDIR/..")
-
-# Makes it easy to "cd" into the dir just by typing `$configs`.
-export configs=$CONFIGS
-
-alias configs="code $CONFIGS"
-
-##############################
 # -- oh-my-zsh --
 ##############################
 
@@ -41,10 +30,6 @@ plugins=(
   poetry     # [python] poetry completions
   virtualenv # [python] sets $VIRTUAL_ENV and shows in theme
 )
-
-# Aliases for reloading and editing zsh.
-alias zr="zsh -l"
-alias ze="code $ZDOTDIR"
 
 ##############################
 # -- homebrew --
