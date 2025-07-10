@@ -13,9 +13,16 @@ alias gcob='git checkout -b'
 git_prune_to_match_remote() {
   # Prune branches
   git fetch --prune
-  # Removes all local branches that are not in remote
-  # https://stackoverflow.com/a/53956328/13150411
-  git branch -a | grep -v ${$(git branch -a | grep remotes | cut -d'/' -f3-)/#/-e} | xargs git branch -D
+
+  # Get list of remote branches (without 'remotes/origin/'), escape for grep
+  remote_branches=$(git branch -r | sed 's| *origin/||' | tr -d ' ')
+
+  # Get local branches
+  for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/); do
+    if ! echo "$remote_branches" | grep -qx "$branch"; then
+      git branch -D "$branch"
+    fi
+  done
 }
 
 ##############################
