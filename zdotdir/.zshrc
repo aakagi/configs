@@ -40,10 +40,6 @@ plugins=(
   globalias  # expand aliases
   poetry     # [python] poetry completions
   virtualenv # [python] sets $VIRTUAL_ENV and shows in theme
-
-  # ... custom plugins
-  akagi    # my personal preferences & aliases
-  highbeam # my highbeam preferences & aliases
 )
 
 # Aliases for reloading and editing zsh.
