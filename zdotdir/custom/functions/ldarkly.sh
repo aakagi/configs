@@ -23,3 +23,5 @@ ldarkly() {
     open "https://app.launchdarkly.com/projects/default/flags/${flag_id}/targeting?env=production&env=test&selected-env=${selected_env}"
   fi
 }
+
+alias ldp='ldarkly --prod'
