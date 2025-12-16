@@ -1,13 +1,12 @@
-##############################
+##
 ## nvm
-##############################
+##
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-
-# Always load nvmrc when entering a directory
+## Always load nvmrc when entering a directory
 autoload -U add-zsh-hook
 load-nvmrc() {
   if [ -f .nvmrc ]; then
@@ -20,9 +19,9 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 # /end
 
-##############################
+##
 ## npm
-##############################
+##
 
 alias ns="npm start"
 alias nr="npm run"
@@ -34,9 +33,9 @@ npmv() {
   npm view $1 versions
 }
 
-##############################
+##
 ## yarn
-##############################
+##
 
 alias y='yarn'
 alias ya='yarn add'
@@ -50,9 +49,9 @@ alias yb='yarn build'
 alias ysb='yarn storybook dev -p 6006'
 alias yp='yarn prisma'
 
-##############################
+##
 ## pnpm
-##############################
+##
 
 alias pn=pnpm
 alias pna='pnpm add'
@@ -66,3 +65,5 @@ case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
 *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+
