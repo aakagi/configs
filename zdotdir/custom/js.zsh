@@ -6,6 +6,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
+
+# Always load nvmrc when entering a directory
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [ -f .nvmrc ]; then
+    nvm use --silent
+  elif [ -n "$NVM_RC_VERSION" ]; then
+    nvm use default --silent
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+# /end
+
 ##############################
 ## npm
 ##############################
