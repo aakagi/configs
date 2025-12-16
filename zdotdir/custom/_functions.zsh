@@ -1,4 +1,5 @@
 FUNCTIONS_DIR="$ZDOTDIR/custom/functions"
 
-source $FUNCTIONS_DIR/_run.sh
-source $FUNCTIONS_DIR/add_path.sh
+for file in "$FUNCTIONS_DIR"/*.sh; do
+  [ -r "$file" ] && source "$file"
+done
