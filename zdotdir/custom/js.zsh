@@ -66,4 +66,12 @@ case ":$PATH:" in
 *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+##
+## Bun
+##
+
+## bun completions
+## I commented out the following line because it wasn't working but using `add_path` below worked.
+# [ -s "/Users/akagi/.bun/_bun" ] && source "/Users/akagi/.bun/_bun"
+add_path "/Users/akagi/.bun/bin"
 
