@@ -31,3 +31,6 @@ alias kp="defaults write com.apple.PowerChime ChimeOnNoHardware -bool true && ki
 # Aliases for reloading and editing zsh.
 alias zr="zsh -l"
 alias ze="code $ZDOTDIR"
+
+## Justfile
+alias j="just"
