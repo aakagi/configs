@@ -41,26 +41,14 @@ alias nr="npm run"
 alias nrd="npm run dev"
 alias na="npm add"
 
-## list npm versions of package
+## List npm versions of package
 npmv() {
   npm view $1 versions
 }
 
 ##
-## yarn
+## Package manager detection
 ##
-
-# alias y='yarn'
-# alias ya='yarn add'
-# alias ys='yarn start'
-# alias yad='yarn add -D'
-# alias yrm='yarn remove'
-# alias yl='yarn lint'
-# alias yd="yarn dev"
-# alias yt='yarn test' # typescript
-# alias yb='yarn build'
-# alias ysb='yarn storybook dev -p 6006'
-# alias yp='yarn prisma'
 
 _detect_pm() {
   local dir="$PWD"
@@ -168,7 +156,4 @@ esac
 ## Bun
 ##
 
-## bun completions
-## I commented out the following line because it wasn't working but using `add_path` below worked.
-# [ -s "/Users/akagi/.bun/_bun" ] && source "/Users/akagi/.bun/_bun"
-add_path "/Users/akagi/.bun/bin"
+[[ -d "$HOME/.bun/bin" ]] && add_path "$HOME/.bun/bin"

@@ -36,7 +36,7 @@ plugins=(
 ##############################
 
 # Add `brew` to path.
-eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #######################################################################################
 # -- Load `oh-my-zsh` --

@@ -24,22 +24,21 @@ alias poad='poetry add -D'
 alias porm='poetry remove'
 alias por='poetry run'
 
-###
-# TODO 2025-03-16: Set these up in a hurry, would be good to get them cleaned up.
+##############################
+## pipx
+##############################
 
-# Created by `pipx` on 2025-03-16 20:11:13
-export PATH="$PATH:/Users/akagi/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
+
+##############################
+## virtualenv
+##############################
 
 # Unset this variable or else running `zr` will clear the venv but not clear this variable so without it, it still looks like the venv is active.
 unset VIRTUAL_ENV
 
 alias pv='eval $(poetry env activate)'
 
-# https://stackoverflow.com/a/58574111
 function virtualenv_info {
-  # [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
-  # PROMPT+='%{$fg[green]%}$(virtualenv_info)%{$reset_color%}%'
-  # Had to update to this because `${` would show up in vscode
   [[ -n "$VIRTUAL_ENV" ]] && echo "\e[32m($(basename $VIRTUAL_ENV))\e[0m "
 }
-###
