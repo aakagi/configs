@@ -1,18 +1,27 @@
-### Download apps
-
-- Sign in to 1password
-- Sign in to Chrome
-- https://karabiner-elements.pqrs.org/
-- https://www.raycast.com/
-
-### Clone repo
+### Setup
 
 ```
 # It will prompt to install xcode / git on initial run.
 git --version
 
+git config --global user.name "Alex Akagi"
+git config --global user.email "alex@akagi.co"
+ssh-keygen -t ed25519 -C "alex@akagi.co"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+pbcopy < ~/.ssh/id_ed25519.pub
+
+# Test the connection
+ssh -T git@github.com
 mkdir -p ~/aakagi && git clone git@github.com:aakagi/configs.git
 ```
+
+- Sign in to Chrome
+- Sign in to 1password
+  - [Download chrome extension](https://1password.com/downloads/browser-extension)
+- Sign in to Github
+- https://karabiner-elements.pqrs.org/
+- https://www.raycast.com/
 
 
 ### System Settings
