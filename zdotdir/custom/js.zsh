@@ -3,20 +3,33 @@
 ##
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
-## Always load nvmrc when entering a directory
-autoload -U add-zsh-hook
-load-nvmrc() {
-  if [ -f .nvmrc ]; then
-    nvm use --silent
-  elif [ -n "$NVM_RC_VERSION" ]; then
-    nvm use default --silent
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+## Lazy-load nvm — defers ~300ms of shell startup until first use
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  _nvm_load() {
+    unset -f nvm node npm npx
+    \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  }
+  nvm()  { _nvm_load; nvm "$@"; }
+  node() { _nvm_load; node "$@"; }
+  npm()  { _nvm_load; npm "$@"; }
+  npx()  { _nvm_load; npx "$@"; }
+
+  ## Auto-load nvmrc when entering a directory
+  autoload -U add-zsh-hook
+  load-nvmrc() {
+    if [ -f .nvmrc ]; then
+      _nvm_load
+      nvm use --silent
+    elif [ -n "$NVM_RC_VERSION" ]; then
+      _nvm_load
+      nvm use default --silent
+    fi
+  }
+  add-zsh-hook chpwd load-nvmrc
+  load-nvmrc
+fi
 # /end
 
 ##
@@ -145,7 +158,7 @@ alias pnrm='pnpm rm'
 alias pnd='pnpm dev'
 alias pni='pnpm install'
 
-export PNPM_HOME="/Users/akagi/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
 *) export PATH="$PNPM_HOME:$PATH" ;;
