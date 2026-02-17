@@ -7,10 +7,19 @@
 - [Karabiner Elements](https://karabiner-elements.pqrs.org/)
 - [Raycast](https://www.raycast.com/)
 
+```
+Terminal (app)
+  Preferences
+    Profiles
+      Sidebar (theme)
+        Basic: "Default"
+      Keyboard
+        Use option key as meta key: On
+
+```
+
 ```zsh
 ## Terminal setup
-
-# Terminal (app) → Preferences → Profiles → Keyboard → Use option key as meta key: On
 
 # It will prompt to install xcode / git on initial run.
 git --version
@@ -49,7 +58,7 @@ mkdir -p ~/aakagi && cd ~/aakagi && git clone git@github.com:aakagi/configs.git 
 ./zdotdir/link.sh
 
 # Link Karabiner
-ln -si ./karabiner.json ~/.config/karabiner/karabiner.json
+mkdir -p ~/.config/karabiner && ln -si ./karabiner.json ~/.config/karabiner/karabiner.json
 ```
 
 
