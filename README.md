@@ -32,19 +32,18 @@ Accessibility
       Dragging style: Three Finger Drag
 
 General
-  Sharing
-    Local hostname: Edit
-
-Control Center
-  Bluetooth: Show in Menu Bar
+  Local hostname: Edit
 
 Desktop & Dock
-  Size: Make smaller (no units)
   Automatically hide and show the Dock: On
   Animate opening applications: Off
   Show suggested and recent apps in Dock: Off
   # Prevents behavior where switching between workspaces causes nothing to be in focus.
-  Mission Control, Displays have separate Spaces: Off
+  Mission Control
+    Displays have separate Spaces: Off
+  Actual Dock (not in system preferences)
+    Remove all apps
+    Size: Make smaller (no units)
 
 Displays
   Automatically adjust brightness: Off
@@ -54,15 +53,25 @@ Keyboard
     Screenshots: Swap save / copy commands for *3 and *4
     Services
       Searching
-        "Search with Google": Off
-  Text Replacements
-    Remove "omw"
-  Text Input, Input Sources: Edit
-    Correct spelling automatically: Off
-    Capitalize words automatically: Off
-    Show inline predictive text: Off
-    Add period with double-space: Off
+        Look Up in Dictionary: Off
+        Search with Google: Off
+  Text Input
+    Input Sources: Edit
+      Correct spelling automatically: Off
+      Capitalize words automatically: Off
+      Show inline predictive text: Off
+      Show suggested replies: Off
+      Add period with double-space: Off
+    Text Replacements
+      Remove "omw"
+  Terminal:
+    # Disable emoji suggestions
+    sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist emoji_enhancements -dict-add Enabled -bool NO
+
+Control Center (in menu bar)
+  Bluetooth: Add to Menu Bar
 ```
+
 
 ### ZDOTDIR
 
