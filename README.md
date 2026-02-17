@@ -1,3 +1,17 @@
+### Download apps
+
+- Sign in to 1password
+- https://karabiner-elements.pqrs.org/
+- https://www.raycast.com/
+
+### Clone repo
+
+```
+mkdir -p ~/aakagi && git clone git@github.com:aakagi/configs.git
+
+```
+
+
 ### System Settings
 
 ```
