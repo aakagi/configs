@@ -44,6 +44,14 @@ ssh -T git@github.com
 mkdir -p ~/aakagi && cd ~/aakagi && git clone git@github.com:aakagi/configs.git && cd configs
 ```
 
+```zsh
+# Link zsh configs
+./zdotdir/link.sh
+
+# Link Karabiner
+ln -si ./karabiner.json ~/.config/karabiner/karabiner.json
+```
+
 
 ### System Settings
 
