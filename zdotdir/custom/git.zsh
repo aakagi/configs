@@ -30,13 +30,15 @@ git_prune_to_match_remote() {
 ##############################
 
 # brew install gh
-alias ghme="gh pr list -A $(gh api user -q '.login') --web" # Opens github with my current open PRs
-alias ghpr="gh pr view --web"                               # Opens current branch's PR on web
-alias ghrepo='gh repo view --web'
+if command -v gh &>/dev/null; then
+  alias ghme="gh pr list -A $(gh api user -q '.login') --web" # Opens github with my current open PRs
+  alias ghpr="gh pr view --web"                               # Opens current branch's PR on web
+  alias ghrepo='gh repo view --web'
 
-# alias ghrev='open "https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Ahighbeamco+review-requested%3A%40me"' # Opens PRs that are pending reviews from me
-# Previous, might go back to it:
-alias ghrev='gh pr list --search "user-review-requested:@me" --web' # Opens PRs that are pending reviews from me
+  # alias ghrev='open "https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Ahighbeamco+review-requested%3A%40me"' # Opens PRs that are pending reviews from me
+  # Previous, might go back to it:
+  alias ghrev='gh pr list --search "user-review-requested:@me" --web' # Opens PRs that are pending reviews from me
+fi
 
 ##############################
 ## graphite
