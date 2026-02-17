@@ -1,14 +1,17 @@
 ### Download apps
 
 - Sign in to 1password
+- Sign in to Chrome
 - https://karabiner-elements.pqrs.org/
 - https://www.raycast.com/
 
 ### Clone repo
 
 ```
-mkdir -p ~/aakagi && git clone git@github.com:aakagi/configs.git
+# It will prompt to install xcode / git on initial run.
+git --version
 
+mkdir -p ~/aakagi && git clone git@github.com:aakagi/configs.git
 ```
 
 
@@ -27,11 +30,6 @@ Accessibility
     Trackpad Options...
       Use trackpad for dragging: On
       Dragging style: Three Finger Drag
-  Audio
-    Spatial audio follows head movements: Off
-    Sound settings (at bottom)
-      Play sound on startup: Off
-      Play user interface sound effects: Off
 
 General
   Sharing
