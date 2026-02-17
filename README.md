@@ -17,7 +17,7 @@ ssh-keygen -t ed25519 -C "alex@akagi.co"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 
-# Go to https://github.com/settings/keys
+# Add new SSH key https://github.com/settings/ssh/new
 pbcopy < ~/.ssh/id_ed25519.pub
 
 # Test the connection
