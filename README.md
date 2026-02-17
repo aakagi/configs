@@ -7,12 +7,26 @@
 - [Karabiner Elements](https://karabiner-elements.pqrs.org/)
 - [Raycast](https://www.raycast.com/)
 
-
 ```zsh
+## Terminal setup
+
 # Terminal (app) → Preferences → Profiles → Keyboard → Use option key as meta key: On
 
 # It will prompt to install xcode / git on initial run.
 git --version
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Github CLI
+brew install gh
+```
+
+```zsh
+## Config script setup
 
 git config --global user.name "Alex Akagi"
 git config --global user.email "alex@akagi.co"
@@ -28,12 +42,6 @@ ssh -T git@github.com
 
 # Clone and go to this dir
 mkdir -p ~/aakagi && cd ~/aakagi && git clone git@github.com:aakagi/configs.git && cd configs
-
-# Install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 
