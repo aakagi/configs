@@ -67,6 +67,9 @@ mkdir -p ~/.config/karabiner && ln -si $(pwd)/karabiner.json ~/.config/karabiner
 
 # Link VS Code settings
 ./vscode/link.sh
+
+# Pull private zsh configs from 1Password
+./zdotdir/custom/pull.sh
 ```
 
 
