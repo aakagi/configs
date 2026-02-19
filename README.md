@@ -7,17 +7,6 @@
 - [Karabiner Elements](https://karabiner-elements.pqrs.org/)
 - [Raycast](https://www.raycast.com/)
 
-```
-Terminal (app)
-  Preferences
-    Profiles
-      Sidebar (theme)
-        Basic: "Default"
-      Keyboard
-        Use option key as meta key: On
-
-```
-
 ```zsh
 ## Terminal setup
 
@@ -32,6 +21,22 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Install Github CLI
 brew install gh
+
+# Disable emoji suggestions
+sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist emoji_enhancements -dict-add Enabled -bool NO
+```
+
+```
+Terminal (app)
+  Preferences
+    Profiles
+      Sidebar (theme)
+        Basic: "Default"
+      Keyboard
+        Use option key as meta key: On
+
+Control Center (in menu bar)
+  Bluetooth: Add to Menu Bar
 ```
 
 ```zsh
@@ -58,7 +63,7 @@ mkdir -p ~/aakagi && cd ~/aakagi && git clone git@github.com:aakagi/configs.git 
 ./zdotdir/link.sh
 
 # Link Karabiner
-mkdir -p ~/.config/karabiner && ln -si ./karabiner.json ~/.config/karabiner/karabiner.json
+mkdir -p ~/.config/karabiner && ln -si $(pwd)/karabiner.json ~/.config/karabiner/karabiner.json
 ```
 
 
@@ -111,23 +116,13 @@ Keyboard
       Add period with double-space: Off
     Text Replacements
       Remove "omw"
-  Terminal:
-    # Disable emoji suggestions
-    sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist emoji_enhancements -dict-add Enabled -bool NO
 
-Control Center (in menu bar)
-  Bluetooth: Add to Menu Bar
+Lock Screen
+  Turn display off on battery when inactive: For 10 minutes
 ```
 
 
-### ZDOTDIR
-
-```zsh
-# Execute this script to link to this repo's zdotdir
-./zdotdir/link.sh
-```
-
-#### Load order
+#### Zsh Load order
 
 ```
 # > zsh -l
@@ -139,3 +134,8 @@ Control Center (in menu bar)
 → /etc/zshrc_Apple_Terminal
 → ~/.zshrc
 ```
+
+### Apps
+
+#### VS Code
+
