@@ -64,6 +64,9 @@ mkdir -p ~/aakagi && cd ~/aakagi && git clone git@github.com:aakagi/configs.git 
 
 # Link Karabiner
 mkdir -p ~/.config/karabiner && ln -si $(pwd)/karabiner.json ~/.config/karabiner/karabiner.json
+
+# Link VS Code settings
+./vscode/link.sh
 ```
 
 
