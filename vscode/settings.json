@@ -1,0 +1,18 @@
+{
+  "workbench.colorTheme": "Default Light Modern",
+  "git.openRepositoryInParentFolders": "always",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabSize": 2,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "security.workspace.trust.untrustedFiles": "open",
+  "shellformat.flag": "",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
