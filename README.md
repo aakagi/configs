@@ -1,32 +1,16 @@
 ### Setup
 
-- Sign in to Chrome
-- Sign in to 1password
-  - [Download chrome extension](https://1password.com/downloads/browser-extension)
-- Sign in to Github
-- [Karabiner Elements](https://karabiner-elements.pqrs.org/)
-- [Raycast](https://www.raycast.com/)
-
-```zsh
-## Terminal setup
-
-# It will prompt to install xcode / git on initial run.
-git --version
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Install Github CLI
-brew install gh
-
-# Disable emoji suggestions
-sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist emoji_enhancements -dict-add Enabled -bool NO
 ```
+Sign in to Chrome
 
-```
+Sign in to 1password
+  [Download chrome extension](https://1password.com/downloads/browser-extension)
+  Settings
+    Remove "Autofill" shortcut
+    Set "Show password" to `⇧⌘\`
+
+Sign in to Github
+
 Terminal (app)
   Preferences
     Profiles
@@ -40,15 +24,26 @@ Control Center (in menu bar)
 ```
 
 ```zsh
-## Config script setup
+# It will prompt to install xcode / git on initial run.
+git --version
 
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Github CLI
+brew install gh
+
+# Set git configs
 git config --global user.name "Alex Akagi"
 git config --global user.email "alex@akagi.co"
+
+# Add new SSH key https://github.com/settings/ssh/new
 ssh-keygen -t ed25519 -C "alex@akagi.co"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
-
-# Add new SSH key https://github.com/settings/ssh/new
 pbcopy < ~/.ssh/id_ed25519.pub
 
 # Test the connection
@@ -57,6 +52,18 @@ ssh -T git@github.com
 # Clone and go to this dir
 mkdir -p ~/aakagi && cd ~/aakagi && git clone git@github.com:aakagi/configs.git && cd configs
 ```
+
+#### Download apps
+- [Karabiner Elements](https://karabiner-elements.pqrs.org/)
+- [Raycast](https://www.raycast.com/)
+  - Sign in & sync settings
+  - Swap keyboard shortcut with spotlight
+- [VS Code](https://code.visualstudio.com/download)
+- [Cursor](https://cursor.com/)
+- [Conductor](https://www.conductor.build/)
+- [TextSniper](https://apps.apple.com/us/app/textsniper/id1528890965)
+  - Enable screen recording permission
+
 
 ```zsh
 # Link zsh configs
@@ -70,7 +77,26 @@ mkdir -p ~/.config/karabiner && ln -si $(pwd)/karabiner.json ~/.config/karabiner
 
 # Pull private zsh configs from 1Password
 ./zdotdir/custom/pull.sh
+
+# Disable emoji suggestions
+sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist emoji_enhancements -dict-add Enabled -bool NO
+
+# Install graphite
+brew install withgraphite/tap/graphite
+# ERROR: Please authenticate your Graphite CLI by visiting https://app.graphite.com/activate
+# TODO: Script to copy `~/.config/graphite/user_config`
+#   Submit settings -> Set PR metadata in CLI
+
+# Install nvm https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script
+# This configs dir handles zsh linking so we don't want to keep the auto-generated .zshrc configs
+PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash'
+nvm install
+
+# Install corepack (pnpm)
+npm install --global corepack@latest
 ```
+
+
 
 
 ### System Settings
@@ -140,8 +166,3 @@ Lock Screen
 → /etc/zshrc_Apple_Terminal
 → ~/.zshrc
 ```
-
-### Apps
-
-#### VS Code
-
