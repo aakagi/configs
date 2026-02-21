@@ -66,6 +66,7 @@ mkdir -p ~/aakagi && cd ~/aakagi && git clone git@github.com:aakagi/configs.git 
 - [Bartender](https://www.macbartender.com/)
 - [Proton Drive](https://proton.me/drive/download)
 - [Dropbox](https://www.dropbox.com/install)
+- [Brave](https://brave.com/download/)
 
 
 ```zsh
@@ -128,6 +129,9 @@ Accessibility
 
 General
   Local hostname: Edit
+
+Sound
+  Play user interface sound effects: Off
 
 Desktop & Dock
   Automatically hide and show the Dock: On
