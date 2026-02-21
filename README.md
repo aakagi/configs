@@ -63,6 +63,9 @@ mkdir -p ~/aakagi && cd ~/aakagi && git clone git@github.com:aakagi/configs.git 
 - [Conductor](https://www.conductor.build/)
 - [TextSniper](https://apps.apple.com/us/app/textsniper/id1528890965)
   - Enable screen recording permission
+- [Bartender](https://www.macbartender.com/)
+- [Proton Drive](https://proton.me/drive/download)
+- [Dropbox](https://www.dropbox.com/install)
 
 
 ```zsh
@@ -94,6 +97,14 @@ nvm install
 
 # Install corepack (pnpm)
 npm install --global corepack@latest
+
+# Link proton drive
+ln -s ~/Library/CloudStorage/ProtonDrive-alexakagi@protonmail.com-folder/life ~/life
+
+# Other useful things
+brew install jq
+brew install just
+brew install deno
 ```
 
 
