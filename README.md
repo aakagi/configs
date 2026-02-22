@@ -109,8 +109,6 @@ brew install deno
 ```
 
 
-
-
 ### System Settings
 
 ```
@@ -140,9 +138,10 @@ Desktop & Dock
   # Prevents behavior where switching between workspaces causes nothing to be in focus.
   Mission Control
     Displays have separate Spaces: Off
-  Actual Dock (not in system preferences)
+  (Actual Dock)
     Remove all apps
-    Size: Make smaller (no units)
+    Remove downloads
+    Size: Make smaller (no units, just vibes)
 
 Displays
   Automatically adjust brightness: Off
