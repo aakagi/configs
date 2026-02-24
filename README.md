@@ -97,7 +97,7 @@ PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm
 nvm install
 
 # Install corepack (pnpm)
-npm install --global corepack@latest
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 # Link proton drive
 ln -s ~/Library/CloudStorage/ProtonDrive-alexakagi@protonmail.com-folder/life ~/life
