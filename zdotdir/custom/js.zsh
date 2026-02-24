@@ -76,7 +76,7 @@ _pm_run() {
 }
 
 # Functions (handle direct enter without expansion)
-y()   { "$(_detect_pm)" "$@"; }
+y()   { if (( $# )); then "$(_detect_pm)" "$@"; else "$(_detect_pm)" install; fi; }
 ya()  { "$(_detect_pm)" add "$@"; }
 yad() { "$(_detect_pm)" add -D "$@"; }
 yrm() { "$(_detect_pm)" remove "$@"; }
