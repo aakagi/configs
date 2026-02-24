@@ -119,6 +119,10 @@ Trackpad
   Secondary click: Click in Bottom Left Corner
   Tap to click: On
 
+Apple Account (iCloud)
+  Drive
+    [Sync] Desktop & Documents Folders: On
+
 Accessibility
   Pointer Control
     Trackpad Options...
