@@ -24,6 +24,9 @@ alias o="open ."
 # vscode
 alias c="code ."
 
+# Cursor
+alias cr="cursor ."
+
 # Automatically make `mv` safe and verbose
 alias mv='mv -vn'
 
