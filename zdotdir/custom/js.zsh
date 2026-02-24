@@ -7,7 +7,7 @@ export NVM_DIR="$HOME/.nvm"
 ## Lazy-load nvm — defers ~300ms of shell startup until first use
 if [ -s "$NVM_DIR/nvm.sh" ]; then
   _nvm_load() {
-    unset -f nvm node npm npx
+    unset -f nvm node npm npx 2>/dev/null
     \. "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
   }
