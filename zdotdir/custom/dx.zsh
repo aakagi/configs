@@ -14,6 +14,12 @@ export configs=$CONFIGS
 
 alias configs="code $CONFIGS"
 
+# zsh reads startup files from $ZDOTDIR, so installers that append to these never take effect.
+for file in ~/.zshrc ~/.zprofile ~/.zlogin; do
+  [[ -s $file ]] && echo "⚠ $file is ignored (ZDOTDIR=$ZDOTDIR). Move its contents into $CONFIGS and delete it."
+done
+unset file
+
 ##############################
 ## DX Aliases
 ##############################

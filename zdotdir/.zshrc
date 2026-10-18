@@ -45,6 +45,16 @@ plugins=(
 # Add `orb` to path and its completions to fpath (must run before oh-my-zsh calls compinit).
 [[ -r ~/.orbstack/shell/init.zsh ]] && source ~/.orbstack/shell/init.zsh
 
+##############################
+# -- grok --
+##############################
+
+# Add `grok` to path and its completions to fpath (must run before oh-my-zsh calls compinit).
+if [[ -d ~/.grok ]]; then
+  export PATH="$HOME/.grok/bin:$PATH"
+  fpath=(~/.grok/completions/zsh $fpath)
+fi
+
 #######################################################################################
 # -- Load `oh-my-zsh` --
 source $ZSH/oh-my-zsh.sh
