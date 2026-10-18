@@ -2,87 +2,87 @@
 [
   {
     "key": "alt+cmd+j",
-    "command": "workbench.action.togglePanel"
+    "command": "workbench.action.togglePanel",
   },
   {
     "key": "cmd+j",
-    "command": "-workbench.action.togglePanel"
+    "command": "-workbench.action.togglePanel",
   },
   {
     "key": "shift+cmd+d",
-    "command": "editor.action.duplicateSelection"
+    "command": "editor.action.duplicateSelection",
   },
   {
     "key": "shift+cmd+b",
-    "command": "workbench.action.toggleSidebarVisibility"
+    "command": "workbench.action.toggleSidebarVisibility",
   },
   {
     "key": "cmd+b",
-    "command": "-workbench.action.toggleSidebarVisibility"
+    "command": "-workbench.action.toggleSidebarVisibility",
   },
   {
     "key": "shift+cmd+c",
     "command": "-workbench.action.terminal.openNativeConsole",
-    "when": "!terminalFocus"
+    "when": "!terminalFocus",
   },
   {
     "key": "cmd+shift+c",
     "command": "editor.action.insertSnippet",
     "when": "editorTextFocus && editorLangId =~ /^(javascript|javascriptreact|typescript|typescriptreact)?$/", // no jsonc
     "args": {
-      "snippet": "console.log(${TM_SELECTED_TEXT}$1)$0"
-    }
+      "snippet": "console.log(${TM_SELECTED_TEXT}$1)$0",
+    },
   },
   // CUSTOM
   {
     "key": "ctrl+cmd+g",
     "command": "editor.action.selectHighlights",
-    "when": "editorFocus"
+    "when": "editorFocus",
   },
   {
     "key": "shift+cmd+l",
     "command": "-editor.action.selectHighlights",
-    "when": "editorFocus"
+    "when": "editorFocus",
   },
   {
     "key": "cmd+r",
     "command": "keybindings.editor.recordSearchKeys",
-    "when": "inKeybindings"
+    "when": "inKeybindings",
   },
   {
     "key": "alt+cmd+k",
     "command": "-keybindings.editor.recordSearchKeys",
-    "when": "inKeybindings && inKeybindingsSearch"
+    "when": "inKeybindings && inKeybindingsSearch",
   },
   {
     "key": "cmd+w",
     "command": "-workbench.action.closeWindow",
-    "when": "!editorIsOpen && !multipleEditorGroups"
+    "when": "!editorIsOpen && !multipleEditorGroups",
   },
   {
     "key": "shift+cmd+l",
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus",
   },
   {
     "key": "shift+cmd+f3",
     "command": "-editor.action.previousSelectionMatchFindAction",
-    "when": "editorFocus"
+    "when": "editorFocus",
   },
   {
     "key": "cmd+f3",
     "command": "-editor.action.nextSelectionMatchFindAction",
-    "when": "editorFocus"
+    "when": "editorFocus",
   },
   {
     "key": "ctrl+[",
     "command": "workbench.action.navigateBack",
-    "when": "canNavigateBack"
+    "when": "canNavigateBack",
   },
   {
     "key": "ctrl+]",
     "command": "workbench.action.navigateForward",
-    "when": "canNavigateForward"
+    "when": "canNavigateForward",
   },
 
   {
@@ -93,86 +93,145 @@
     "command": "editor.action.insertSnippet",
     "when": "editorTextFocus && editorLangId =~ /(javascript|javascriptreact|typescript|typescriptreact|jsonc|css)$/",
     "args": {
-      "snippet": "/**\n * ${TM_SELECTED_TEXT}$0\n */"
-    }
+      "snippet": "/**\n * ${TM_SELECTED_TEXT}$0\n */",
+    },
   },
   {
     "key": "ctrl+t",
     "command": "-editor.action.transposeLetters",
-    "when": "textInputFocus && !editorReadonly"
+    "when": "textInputFocus && !editorReadonly",
   },
   {
     "key": "ctrl+t",
-    "command": "workbench.action.showAllSymbols"
+    "command": "workbench.action.showAllSymbols",
   },
   {
     "key": "cmd+t",
-    "command": "-workbench.action.showAllSymbols"
+    "command": "-workbench.action.showAllSymbols",
   },
   {
     "key": "cmd+t",
-    "command": "workbench.action.quickOpen"
+    "command": "workbench.action.quickOpen",
   },
   {
     "key": "cmd+b",
     "command": "editor.action.revealDefinition",
-    "when": "editorHasDefinitionProvider && editorTextFocus"
+    "when": "editorHasDefinitionProvider && editorTextFocus",
   },
   {
     "key": "ctrl+cmd+down",
     "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "editorTextFocus && !editorReadonly",
   },
   {
     "key": "ctrl+cmd+up",
     "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "editorTextFocus && !editorReadonly",
   },
   {
     "key": "alt+up",
     "command": "-editor.action.pageUpHover",
-    "when": "editorHoverFocused"
+    "when": "editorHoverFocused",
   },
   {
     "key": "alt+down",
     "command": "-editor.action.pageDownHover",
-    "when": "editorHoverFocused"
+    "when": "editorHoverFocused",
   },
   {
     "key": "cmd+q cmd+q",
-    "command": "workbench.action.quit"
+    "command": "workbench.action.quit",
   },
   {
     "key": "cmd+q",
-    "command": "-workbench.action.quit"
+    "command": "-workbench.action.quit",
   },
   {
     "key": "cmd+i",
     "command": "-inlineChat.holdForSpeech",
-    "when": "hasSpeechProvider && inlineChatVisible && textInputFocus"
+    "when": "hasSpeechProvider && inlineChatVisible && textInputFocus",
   },
   {
     "key": "cmd+i",
     "command": "-notebook.cell.chat.start",
-    "when": "config.notebook.experimental.cellChat && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus || config.notebook.experimental.generate && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus"
+    "when": "config.notebook.experimental.cellChat && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus || config.notebook.experimental.generate && notebookChatAgentRegistered && notebookEditable && notebookEditorFocused && !inputFocus",
   },
   {
     "key": "cmd+i",
     "command": "-workbench.action.chat.startVoiceChat",
-    "when": "chatIsEnabled && hasSpeechProvider && inChatInput && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress || chatIsEnabled && hasSpeechProvider && inlineChatFocused && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress"
+    "when": "chatIsEnabled && hasSpeechProvider && inChatInput && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress || chatIsEnabled && hasSpeechProvider && inlineChatFocused && !chatSessionRequestInProgress && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress",
   },
   {
     "key": "cmd+i",
     "command": "-workbench.action.chat.stopListeningAndSubmit",
-    "when": "inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'view' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'view'"
+    "when": "inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inChatInput && voiceChatInProgress && scopedVoiceChatInProgress == 'view' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'editor' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'inline' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'quick' || inlineChatFocused && voiceChatInProgress && scopedVoiceChatInProgress == 'view'",
   },
   {
     "key": "cmd+i",
-    "command": "-composer.startComposerPrompt"
+    "command": "-composer.startComposerPrompt",
   },
   {
     "key": "cmd+m",
     "command": "-markdown.extension.editing.toggleMath",
-    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-  }
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/",
+  },
+  {
+    "key": "cmd+e",
+    "command": "-cursor.toggleAgentWindowIDEUnification",
+    "when": "cursor.agentIdeUnification.featureGate && !isGlass && workbenchState != 'empty'",
+  },
+  {
+    "key": "cmd+e",
+    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+    "when": "accessibilityHelpIsShown",
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "-workbench.action.nextEditor",
+  },
+  {
+    "key": "alt+cmd+left",
+    "command": "-workbench.action.previousEditor",
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "workbench.action.nextEditorInGroup",
+  },
+  {
+    "key": "cmd+r alt+cmd+right",
+    "command": "-workbench.action.nextEditorInGroup",
+  },
+  {
+    "key": "alt+cmd+left",
+    "command": "workbench.action.previousEditorInGroup",
+  },
+  {
+    "key": "cmd+r alt+cmd+left",
+    "command": "-workbench.action.previousEditorInGroup",
+  },
+  // cmd+\ is reserved for splitting the terminal — never the editor. No
+  // when-clause so focus-drift can't fall through to splitEditor.
+  {
+    "key": "cmd+\\",
+    "command": "workbench.action.terminal.split",
+  },
+  {
+    "key": "cmd+\\",
+    "command": "-workbench.action.splitEditor",
+  },
+  {
+    "key": "cmd+i",
+    "command": "-workbench.action.chat.startVoiceChat",
+    "when": "chatIsEnabled && hasSpeechProvider && inChatInput && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress || chatIsEnabled && hasSpeechProvider && inlineChatFocused && !editorFocus && !notebookEditorFocused && !scopedVoiceChatGettingReady && !speechToTextInProgress"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-inlineChat.askInChat",
+    "when": "config.inlineChat.askInChat && editorFocus && inlineChatFileBelongsToChat && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput || config.inlineChat.askInChat && editorFocus && inlineChatFileBelongsToChat && inlineChatHasNotebookAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook' || config.inlineChat.askInChat && editorFocus && inlineChatFileBelongsToChat && inlineChatHasNotebookInline && inlineChatPossible && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook'"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-inlineChat.start",
+    "when": "editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput || editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat || editorFocus && inlineChatHasEditsAgent && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat || editorFocus && inlineChatHasNotebookAgent && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookInline && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookInline && inlineChatPossible && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasEditsAgent && inlineChatHasNotebookAgent && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasEditsAgent && inlineChatHasNotebookAgent && inlineChatPossible && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasEditsAgent && inlineChatHasNotebookInline && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasEditsAgent && inlineChatHasNotebookInline && inlineChatPossible && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookAgent && inlineChatHasNotebookInline && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookAgent && inlineChatHasNotebookInline && inlineChatPossible && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookAgent && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookInline && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasEditsAgent && inlineChatHasNotebookAgent && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasEditsAgent && inlineChatHasNotebookInline && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook' || editorFocus && inlineChatHasNotebookAgent && inlineChatHasNotebookInline && inlineChatPossible && !config.inlineChat.askInChat && !editorReadonly && !editorSimpleInput && !inlineChatFileBelongsToChat && activeEditor == 'workbench.editor.notebook'"
+  },
 ]
