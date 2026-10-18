@@ -37,7 +37,7 @@ alias cr="cursor ."
 alias mv='mv -vn'
 
 # Run `tree` command for active & maintained projects
-alias lsproj="tree -d -L 2 -I 'archive|$sandbox_dirname' $proj"
+alias lsproj="tree -d -L 2 -I 'archive|node_modules|${sandbox_dirname:-sandbox}' ${AAKAGI:-$HOME/aakagi}"
 
 # Aliases for reloading and editing zsh.
 alias zr="zsh -l"
