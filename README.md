@@ -94,11 +94,12 @@ brew install withgraphite/tap/graphite
 # TODO: Script to copy `~/.config/graphite/user_config`
 #   Submit settings -> Set PR metadata in CLI
 
-# Install nvm https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script
-# This configs dir handles zsh linking so we don't want to keep the auto-generated .zshrc configs
-PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash'
-nvm install --lts
-nvm alias default lts/*
+# Install mise, which manages node/python versions per project (reads .nvmrc, .node-version, .python-version).
+# Hermit repos (e.g. highbeam) still use their own pinned toolchain.
+brew install mise
+mkdir -p ~/.config/mise && ln -si $(pwd)/mise/config.toml ~/.config/mise/config.toml
+mise install
+# Then run `mise install` in each project to fetch the versions it pins.
 
 # Install pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -

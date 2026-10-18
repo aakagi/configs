@@ -1,20 +1,4 @@
-##############################
-## pyenv
-##############################
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-
-## Lazy-load pyenv — defers ~100ms of shell startup until first use
-if command -v pyenv &>/dev/null; then
-  _pyenv_load() {
-    unset -f pyenv python python3
-    eval "$(pyenv init -)"
-  }
-  pyenv()   { _pyenv_load; pyenv "$@"; }
-  python()  { _pyenv_load; python "$@"; }
-  python3() { _pyenv_load; python3 "$@"; }
-fi
+## Python versions come from mise (see .zshrc), which reads each project's .python-version.
 
 ##############################
 ## python

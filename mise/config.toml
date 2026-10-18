@@ -1,0 +1,8 @@
+[tools]
+# Default when a project doesn't pin a version.
+node = "24"
+terraform = "1.16.5"
+
+[settings]
+# Honor the version files other managers use (.nvmrc, .node-version, .python-version).
+idiomatic_version_file_enable_tools = ["node", "python"]

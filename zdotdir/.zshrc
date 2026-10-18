@@ -39,6 +39,16 @@ plugins=(
 [[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ##############################
+# -- mise --
+##############################
+
+# Put mise shims ahead of Homebrew so each project gets the node/python version it pins. A shim only
+# takes over a tool with a version configured for the current directory and otherwise falls through
+# to the next binary on PATH. Shims (instead of `mise activate`) let Hermit environments, which
+# prepend their own bin on `cd`, keep precedence in the repos that use them.
+command -v mise &>/dev/null && eval "$(mise activate zsh --shims)"
+
+##############################
 # -- orbstack --
 ##############################
 

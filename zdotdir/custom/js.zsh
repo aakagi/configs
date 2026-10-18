@@ -1,36 +1,4 @@
-##
-## nvm
-##
-
-export NVM_DIR="$HOME/.nvm"
-
-## Lazy-load nvm — defers ~300ms of shell startup until first use
-if [ -s "$NVM_DIR/nvm.sh" ]; then
-  _nvm_load() {
-    unset -f nvm node npm npx 2>/dev/null
-    \. "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-  }
-  nvm()  { _nvm_load; nvm "$@"; }
-  node() { _nvm_load; node "$@"; }
-  npm()  { _nvm_load; npm "$@"; }
-  npx()  { _nvm_load; npx "$@"; }
-
-  ## Auto-load nvmrc when entering a directory
-  autoload -U add-zsh-hook
-  load-nvmrc() {
-    if [ -f .nvmrc ]; then
-      _nvm_load
-      nvm use --silent
-    elif [ -n "$NVM_RC_VERSION" ]; then
-      _nvm_load
-      nvm use default --silent
-    fi
-  }
-  add-zsh-hook chpwd load-nvmrc
-  load-nvmrc
-fi
-# /end
+## Node versions come from mise (see .zshrc), which reads each project's .nvmrc / .node-version.
 
 ##
 ## npm
