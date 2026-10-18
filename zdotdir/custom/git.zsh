@@ -14,15 +14,10 @@ git_prune_to_match_remote() {
   # Prune branches
   git fetch --prune
 
-  # Get list of remote branches (without 'remotes/origin/'), escape for grep
-  remote_branches=$(git branch -r | sed 's| *origin/||' | tr -d ' ')
-
-  # Get local branches
-  for branch in $(git for-each-ref --format='%(refname:short)' refs/heads/); do
-    if ! echo "$remote_branches" | grep -qx "$branch"; then
-      git branch -D "$branch"
-    fi
-  done
+  # Delete local branches whose upstream was deleted. Never-pushed branches have no upstream and are kept.
+  git for-each-ref --format='%(refname:short) %(upstream:track)' refs/heads/ |
+    awk '$2 == "[gone]" { print $1 }' |
+    xargs -r git branch -D
 }
 
 ##############################
