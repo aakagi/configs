@@ -38,6 +38,13 @@ plugins=(
 # Add `brew` to path.
 [[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
+##############################
+# -- orbstack --
+##############################
+
+# Add `orb` to path and its completions to fpath (must run before oh-my-zsh calls compinit).
+[[ -r ~/.orbstack/shell/init.zsh ]] && source ~/.orbstack/shell/init.zsh
+
 #######################################################################################
 # -- Load `oh-my-zsh` --
 source $ZSH/oh-my-zsh.sh
