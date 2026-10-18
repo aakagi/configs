@@ -160,3 +160,4 @@ esac
 ##
 
 [[ -d "$HOME/.bun/bin" ]] && add_path "$HOME/.bun/bin"
+[[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
