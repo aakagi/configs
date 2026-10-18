@@ -85,6 +85,9 @@ mkdir -p ~/.config/karabiner && ln -si $(pwd)/karabiner.json ~/.config/karabiner
 # Disable emoji suggestions
 sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist emoji_enhancements -dict-add Enabled -bool NO
 
+# Disable the Quick Note hot corner (bottom right)
+defaults write com.apple.dock wvous-br-corner -int 1 && killall Dock
+
 # Install graphite
 brew install withgraphite/tap/graphite
 # ERROR: Please authenticate your Graphite CLI by visiting https://app.graphite.com/activate
@@ -142,7 +145,7 @@ Desktop & Dock
   # Prevents behavior where switching between workspaces causes nothing to be in focus.
   Mission Control
     Displays have separate Spaces: Off
-  # Mousing into the bottom right corner opens a Quick Note by default.
+  # Mousing into the bottom right corner opens a Quick Note by default (also scripted in Setup).
   Hot Corners...
     Bottom right: -
   (Actual Dock)
