@@ -142,6 +142,9 @@ Desktop & Dock
   # Prevents behavior where switching between workspaces causes nothing to be in focus.
   Mission Control
     Displays have separate Spaces: Off
+  # Mousing into the bottom right corner opens a Quick Note by default.
+  Hot Corners...
+    Bottom right: -
   (Actual Dock)
     Remove all apps
     Remove downloads
