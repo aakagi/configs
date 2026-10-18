@@ -97,9 +97,10 @@ brew install withgraphite/tap/graphite
 # Install nvm https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script
 # This configs dir handles zsh linking so we don't want to keep the auto-generated .zshrc configs
 PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash'
-nvm install
+nvm install --lts
+nvm alias default lts/*
 
-# Install corepack (pnpm)
+# Install pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 # Link proton drive
