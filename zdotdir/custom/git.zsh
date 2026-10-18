@@ -45,3 +45,4 @@ fi
 ##############################
 
 alias gtc='gt continue'
+alias gtcn='gt c --no-interactive'
