@@ -40,7 +40,7 @@ alias mv='mv -vn'
 alias lsproj="tree -d -L 2 -I 'archive|node_modules|${sandbox_dirname:-sandbox}' ${AAKAGI:-$HOME/aakagi}"
 
 # Aliases for reloading and editing zsh.
-alias zr="zsh -l"
+alias zr="exec zsh -l"
 alias ze="code $ZDOTDIR"
 
 ## Justfile
